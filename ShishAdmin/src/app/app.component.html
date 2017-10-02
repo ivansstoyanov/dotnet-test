@@ -1,0 +1,5 @@
+﻿<div style="position: absolute; width: 90%; z-index: 10001; left: 5%; top: 2%;">
+  <ngb-alert [type]="alert.type" (close)="closeAlert(alert)" *ngFor="let alert of alerts">{{ alert.message }}</ngb-alert>
+</div>
+<router-outlet></router-outlet>
+

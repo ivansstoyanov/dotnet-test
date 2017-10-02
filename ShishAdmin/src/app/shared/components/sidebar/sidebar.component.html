@@ -1,0 +1,25 @@
+﻿<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group">
+        <a routerLink="/admin" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{ exact: true }" class="list-group-item">
+            <i class="fa fa-fw fa-wrench"></i>&nbsp;Dashboard
+        </a>
+        <a [routerLink]="['/admin/qr-generator']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-plus"></i>&nbsp;QR Generator
+        </a>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('pages')">
+                <span><i class="fa fa-plus"></i>&nbsp; Tabaccos</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'pages'">
+              <ul class="submenu">
+                  <li>
+                      <a href="javascript:void(0)"><span>All</span></a>
+                  </li>
+                  <li>
+                      <a href="javascript:void(0)"><span>Relations</span></a>
+                  </li>
+              </ul>
+            </li>
+        </div>
+    </ul>
+</nav>
